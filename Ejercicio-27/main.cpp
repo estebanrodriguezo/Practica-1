@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    char x=43,y=45,z=158,v=246,s;
+    char x=43,y=45,z=42,v=47,s;
     int a,b,n;
     cout<<"ingrese un numero: "<<endl;
     cin>>a;

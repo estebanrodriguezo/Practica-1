@@ -25,7 +25,7 @@ int main()
         cout<<n<<" es primo!"<<endl;
     }
     else{
-        cout<<n<<" no es primo :("<<endl;
+        cout<<n<<" no es primo "<<endl;
     }
 
 }
