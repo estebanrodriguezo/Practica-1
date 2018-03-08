@@ -16,16 +16,59 @@ using namespace std;
 
 int main()
 {
-    int x,i=1,z=0;
+    int x,i=1,esp,ast;
     cout<<"Ingrese un numero impar: "<<endl;
     cin>>x;
+    while(i<=x-2){
+        esp=(x-i)/2;
+        while(esp>=1){
 
-    while(x>=z){
+            cout<<" ";
+            esp--;
+        }
+        ast=1;
+        while(ast<=i){
 
-        while(z<i){
-        cout<<"*";
-            z++;
-
+            cout<<"*";
+            ast++;
+        }
+        esp=(x-i)/2;
+        while(esp>=1){
+            cout<<" ";
+            esp--;
+        }
+        cout<<endl;
+        i=i+2;
     }
+
+        ast=1;
+        while(ast<=x){
+
+            cout<<"*";
+            ast++;
+        }
+        cout<<endl;
+
+    i=x-2;
+    while(i>=1){
+        esp=(x-i)/2;
+        while(esp>=1){
+            cout<<" ";
+            esp--;
+        }
+        ast=1;
+        while(ast<=i){
+            cout<<"*";
+            ast++;
+        }
+        esp=(x-i)/2;
+        while(esp>=1){
+            cout<<" ";
+            esp--;
+        }
+        cout<<endl;
+        i=i-2;
+    }
+
 }
-}
+
