@@ -10,47 +10,30 @@ Nota: la salida del programa debe ser: El resultado de la suma es: 36.
 
 
 using namespace std;
-static int potencia(int base, int exp);
-static int sumaDigitosE(int numero, int nDigitos);
+static int potencia(int base, int exp);//funcion creada para generar las potencias
+static int sumaDigitosE(int numero, int nDigitos);//funcion creada para acomular la suma de los digitos ya potenciados
 int main()
 {
     int x,nDigitos=1,z;
     cout << "Ingrese un numero: " << endl;
-  cin>>x;
-
+    cin>>x;
     z=x;
-
-    while(z>=10){
+    while(z>=10){//este while tiene como funcion hallar el numeros de digitos del numero ingresado
         z=z/10;
         nDigitos++;
     }
 
     cout<<sumaDigitosE(x,nDigitos)<<endl;
-
-    //cout<<potencia(10,0)<<endl;
-    //cout<<10%potencia(10,0)<<endl;
-   /* cout<<potencia(10,3)<<endl;
-    cout<<potencia(25,1)<<endl;
-    cout<<potencia(2,7)<<endl;
-    cout<<potencia(3,3)<<endl;
-    cout<<potencia(0,3)<<endl;
-    cout<<potencia(0,0)<<endl;
-    cout<<potencia(4,0)<<endl;
-  //  cout<<x<<endl;
-
-   // int mostrar=sumaDigitosE(x,i);
-   // cout<<mostrar;
-*/
 }
 
 
 static int sumaDigitosE(int numero,int nDigitos){
     int suma=0;
     int digitoActual=0;
-    for(int j=nDigitos;j>=1;j--){
-    digitoActual=numero/(potencia(10,j-1));
+    for(int j=nDigitos;j>=1;j--){//lo que hace este for es sacar digito por digito mientras a suvez llama la funcion potencia para potenciarlo por el mismo
+    digitoActual=numero/(potencia(10,j-1));//se saca el primer digito haciendo una division entera por 10^numero de digitos menos uno
     suma= suma+ potencia(digitoActual,digitoActual);
-    numero= numero%(potencia(10,j-1));
+    numero= numero%(potencia(10,j-1));//para ir eliminando digitos se hace una division modulo
     }
     return suma;
 }

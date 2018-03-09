@@ -9,7 +9,7 @@ using namespace std;
 int mcd(int a, int b);
 int mcm(int a, int b);
 
-int main(void)
+int main()
 {
     int a, b;
 
